@@ -24,9 +24,9 @@ Crea un controlador 'SaludoController' para implementar:
 **TAREA 4.4 Formularios con validación**
 * a) Crea un formulario de usuario con los siguientes campos: nombre, apellido, email, teléfono.
 Realiza las siguientes validaciones (todos los campos son obligatorios salvo teléfono):
-- nombre: string de entre 2 y 15 caracteres
-- nombre: string de entre 2 y 20 caracteres
-- email: formato correcto 
-- teléfono: 6xxxxxxxx y 7xxxxxxxx
+    - nombre: string de entre 2 y 15 caracteres
+    - nombre: string de entre 2 y 20 caracteres
+    - email: formato correcto 
+    - teléfono: 6xxxxxxxx y 7xxxxxxxx
 Si se introducen los datos correctamente deberá mostralos en una vista, en caso contrario deberá indicar que dato(s) no son correctos. 
 
