@@ -13,4 +13,19 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
+Route::get('/contacto',function () {
+	return view('contacto');
+})->name("contacto");
+
+Route::get('/blog/{id}', function($id){
+	return view('blog',['id'=>$id]);
+})->name('blog');
+
+Route::get('/blog1/{id}/{nombre}', function($id,$nombre){
+	return view('blog1',['id'=>$id,'nombre'=>$nombre]);
+})->where(['id'=>'[0-9]+','nombre'=>'[a-zA-Z]+'])->name('blog1');
+
+
+

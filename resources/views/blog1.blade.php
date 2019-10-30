@@ -4,8 +4,7 @@
         <title>Laravel</title>      
     </head>
     <body>
-       <a href="{{route('contacto')}}">Contacto</a><br>
-       <a href="{{route('blog',1)}}">Blog</a><br>
-       <a href="{{route('blog1',[6,'Xabi'])}}">Blog1</a>
+       Este es el articulo numero {{$id}} de {{$nombre}}<br><br>
+       <a href="{{route('welcome')}}">Itzuli</a>
     </body>
 </html>
