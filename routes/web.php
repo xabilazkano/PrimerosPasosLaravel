@@ -27,5 +27,8 @@ Route::get('/blog1/{id}/{nombre}', function($id,$nombre){
 	return view('blog1',['id'=>$id,'nombre'=>$nombre]);
 })->where(['id'=>'[0-9]+','nombre'=>'[a-zA-Z]+'])->name('blog1');
 
+Route::get('/saludo','SaludoController@saludo')->name('saludo');
+Route::get('/saludo/{nombre}','SaludoController@saludo1')->name('saludo1');
+Route::get('/saludo/{color}/{nombre?}','SaludoController@saludoColor')->name('saludoColor');
 
 
