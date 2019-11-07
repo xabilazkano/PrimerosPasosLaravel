@@ -9,7 +9,8 @@
        <a href="{{route('blog1',[6,'Xabi'])}}">Blog1</a><br>
        <a href="{{route('saludo')}}">Saludo</a><br>
        <a href="{{route('saludo1','Xabi')}}">Saludo1</a><br>
-       <a href="{{route('saludoColor',['eb34d2','Xabi'])}}">Saludo2</a><br>
+       <a href="{{route('saludoColor',['eb34d2'])}}">Saludo2</a><br>
+       <a href="{{route('validacion')}}">Formulario validado</a><br>
 
     </body>
 </html>
