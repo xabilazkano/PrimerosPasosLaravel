@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Session;
 use App\Http\Requests\Validacion;
+use App\Rules\Dni;
 
 class SaludoController extends Controller
 {
@@ -45,6 +46,18 @@ class SaludoController extends Controller
     {
          
         return view('verFormulario',['nombre'=>$request->input('nombre'),'apellido'=>$request->input('apellido'),'email'=>$request->input('email'),'telefono'=>$request->input('telefono')]);
+       
+    }
+
+     public function store3(Validacion $request)
+    {
+
+        $validatedData = $request->validate([
+            'dni' => ['required',new Dni],
+        ]);
+        $validated = $request->validated();
+         
+        return view('verFormulario2',['nombre'=>$request->input('nombre'),'apellido'=>$request->input('apellido'),'email'=>$request->input('email'),'telefono'=>$request->input('telefono'),'dni' => $request->input('dni')]);
        
     }
 

@@ -27,6 +27,10 @@ Route::get('/form2',function(){
 	return view('nuevoFormulario');
 })->name("validacion2");
 
+Route::get('/form3',function(){
+	return view('dniFormulario');
+})->name("validacion3");
+
 Route::get('/blog/{id}', function($id){
 	return view('blog',['id'=>$id]);
 })->name('blog');
@@ -40,5 +44,7 @@ Route::get('/saludo/{nombre}','SaludoController@saludo1')->name('saludo1');
 Route::get('/saludo/{color}/{nombre?}','SaludoController@saludoColor')->name('saludoColor');
 Route::post('/validacion','SaludoController@store')->name('store');
 Route::post('/validar','SaludoController@store2')->name('store2');
+Route::post('/validar2','SaludoController@store3')->name('store3');
+
 
 

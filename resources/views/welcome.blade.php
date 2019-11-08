@@ -12,6 +12,7 @@
        <a href="{{route('saludoColor',['eb34d2'])}}">Saludo2</a><br>
        <a href="{{route('validacion')}}">Formulario validado</a><br>
        <a href="{{route('validacion2')}}">Formulario validado2</a><br>
+       <a href="{{route('validacion3')}}">Formulario validado3</a><br>
 
     </body>
 </html>
