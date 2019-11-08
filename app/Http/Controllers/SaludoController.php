@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Session;
+use App\Http\Requests\Validacion;
 
 class SaludoController extends Controller
 {
@@ -30,12 +31,20 @@ class SaludoController extends Controller
          $validator = Validator::make($request->all(), [
            'email' => 'required|email',
            'nombre' => 'required|string|min:2|max:15',
-           'apellido' => 'required|string|min:2|max:20'
+           'apellido' => 'required|string|min:2|max:20',
+           'telefono' => 'regex:/^[679][0-9]{8}$/'
 
            
            
        ])->validate();
-        return view('welcome');
+        return view('verFormulario',['nombre'=>$request->input('nombre'),'apellido'=>$request->input('apellido'),'email'=>$request->input('email'),'telefono'=>$request->input('telefono')]);
+       
+    }
+
+     public function store2(Validacion $request)
+    {
+         
+        return view('verFormulario',['nombre'=>$request->input('nombre'),'apellido'=>$request->input('apellido'),'email'=>$request->input('email'),'telefono'=>$request->input('telefono')]);
        
     }
 

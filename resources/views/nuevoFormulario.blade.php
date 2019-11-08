@@ -5,7 +5,7 @@
 </head>
 <body>
 
-    <form action="{{route('store')}}" method="post">
+    <form action="{{route('store2')}}" method="post">
         @csrf
         Nombre: <input type="text" name="nombre" value="{{old('nombre')}}">
         @if ($errors->has('nombre'))
